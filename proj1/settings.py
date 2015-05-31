@@ -53,6 +53,12 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = 'proj1.urls'
 
+EMAIL_HOST = 'poczta.o2.pl'
+EMAIL_HOST_USER = 'project.mail@o2.pl'
+EMAIL_HOST_PASSWORD = 'super1'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -103,3 +109,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "staticfiles", "our_static"),
+
+)
+
+STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "/media/rotten/Devdevdev/static_in_env/", "static_root")
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "/media/rotten/Devdevdev/static_in_env/", "media_root")
