@@ -27,7 +27,7 @@ def home(request):
             "template_title": "Thanks for joining our newsletter, Have a nice day!"
         }
 
-    return render(request, 'base.html', context)
+    return render(request, 'home.html', context)
 
 
 def contact(request):                           #contact view
